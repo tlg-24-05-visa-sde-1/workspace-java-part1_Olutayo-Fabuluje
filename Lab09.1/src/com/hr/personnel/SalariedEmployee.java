@@ -23,8 +23,8 @@ public class SalariedEmployee extends Employee {
         setSalary(salary);            // handle salary myself, by delegating to its setter
     }
 
-    // business or action-oriented methods
 
+    // business or action-oriented methods
 
     @Override    // interface TaxPayer
     public void payTaxes() {
@@ -40,6 +40,8 @@ public class SalariedEmployee extends Employee {
     public void takeVacation() {
         System.out.println(getName() + " is on vacation");
     }
+
+
 
     //accessor methods
     public double getSalary() {

@@ -3,6 +3,7 @@ package com.hr.personnel;
 import java.time.LocalDate;
 
 public class Executive extends SalariedEmployee {
+
     public Executive(String name, LocalDate hireDate, double salary) {
         super(name, hireDate, salary);
     }
@@ -10,5 +11,12 @@ public class Executive extends SalariedEmployee {
     @Override
     public void work() {
         System.out.println(getName() + " enjoying a nice round of golf");
+    }
+
+
+    @Override   // interface TaxPAyer
+    public void fileReturn() {
+        System.out.println("Return filed electronically");
+
     }
 }

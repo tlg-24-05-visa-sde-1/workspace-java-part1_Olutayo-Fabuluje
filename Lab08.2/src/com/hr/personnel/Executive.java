@@ -3,6 +3,7 @@ package com.hr.personnel;
 import java.time.LocalDate;
 
 public class Executive extends SalariedEmployee {
+
     public Executive(String name, LocalDate hireDate, double salary) {
         super(name, hireDate, salary);
     }
