@@ -4,8 +4,9 @@ import gov.irs.TaxPayer;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-
 public class HourlyEmployee extends Employee {
+
+
     private double rate;
     private double hours;
 
@@ -42,7 +43,10 @@ public class HourlyEmployee extends Employee {
         System.out.println(getName() + " is paid hourly " + getRate() * getHours());
     }
 
-
+    @Override
+    public double getStandardDeduction() {
+        return 7500.0;
+    }
 
     // Accessor Methods
 

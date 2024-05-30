@@ -51,6 +51,8 @@ public abstract class Employee implements TaxPayer {
     // all we have is name and hireDate
 
 
+    public abstract double getStandardDeduction();
+
     // We need a way to say "all employees get paid, i.e. we NEED a pay() method here.
     // BUT we cant implement here, all we have is name and hireDate
     // SO we say "THAT " "all employees get paid", but we don't say "HOW"

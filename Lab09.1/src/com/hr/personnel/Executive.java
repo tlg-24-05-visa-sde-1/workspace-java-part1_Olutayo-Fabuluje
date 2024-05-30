@@ -3,6 +3,7 @@ package com.hr.personnel;
 import java.time.LocalDate;
 
 public class Executive extends SalariedEmployee {
+    public static final double STANDARD_DEDUCTION = 100_000.0;
 
     public Executive(String name, LocalDate hireDate, double salary) {
         super(name, hireDate, salary);
@@ -14,9 +15,14 @@ public class Executive extends SalariedEmployee {
     }
 
 
-    @Override   // interface TaxPAyer
+    @Override   // interface TaxPayer
     public void fileReturn() {
         System.out.println("Return filed electronically");
 
+    }
+
+    @Override
+    public double getStandardDeduction() {
+        return 100_000.0;
     }
 }
