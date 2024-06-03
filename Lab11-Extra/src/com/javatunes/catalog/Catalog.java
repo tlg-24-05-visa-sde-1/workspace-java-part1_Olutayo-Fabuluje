@@ -8,6 +8,7 @@
 
 package com.javatunes.catalog;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public interface Catalog {
@@ -27,6 +28,8 @@ public interface Catalog {
      * A no-matches result should return an empty collection (not null).
      */
     public Collection<MusicItem> findByKeyword(String keyword);
+
+    Collection<MusicItem> findByKeyword(ArrayList<MusicItem> musicItems, String keyword);
 
     /**
      * Returns a collection of items that are of the supplied genre (category).
