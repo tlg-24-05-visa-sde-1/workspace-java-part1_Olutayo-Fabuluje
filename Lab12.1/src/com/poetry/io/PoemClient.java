@@ -8,8 +8,9 @@
 
 package com.poetry.io;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class PoemClient {
 
@@ -17,7 +18,7 @@ public class PoemClient {
      * To run one method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-        // readPoem();
+        readPoem();
         // writePoem();
     }
 
@@ -34,13 +35,29 @@ public class PoemClient {
      * The try-with-resources below allows you to initialize the stream and auto-close it.
      */
     private static void readPoem() {
-        // TODO: initialize 'reader' variable and complete the try block
-        try (BufferedReader reader = null) {
-
+        try {
+            String poem = Files.readString(Path.of("famous-poem.txt"));
+            System.out.println(poem);
         }
         catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
+
+
+/*        // TODO: initialize 'reader' variable and complete the try block
+        try (BufferedReader reader = new BufferedReader(new FileReader("famous-poem.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {   // when it goes null, you are at EOF
+                System.out.println(line);
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 
     /**
@@ -55,6 +72,12 @@ public class PoemClient {
      * Use a try-with-resources to initialize the stream and auto-close it.
      */
     private static void writePoem() {
-        // TODO
+        try (PrintWriter writer = new PrintWriter(new FileWriter("haiku.txt"))) {
+            writer.print("this is a test");
+
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
