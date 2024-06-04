@@ -30,7 +30,6 @@ public class Department {
     private String name;
     private String location;
     private final Collection<Employee> employees = new ArrayList<>();
-    private int currentIndex = 0;  // for dealing with the array
 
     // constructors
     public Department() {

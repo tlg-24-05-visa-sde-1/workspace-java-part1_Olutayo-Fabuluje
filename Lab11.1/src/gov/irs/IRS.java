@@ -13,13 +13,11 @@ import java.util.Collection;
 
 /**
  * The IRS maintains a collection of TaxPayers and collects taxes from them.
- *
  * Note the interface type TaxPayer, used throughout the class.
  */
 public class IRS {
     // what types of objects can this array contain?
     private final Collection<TaxPayer> payers = new ArrayList<>();
-    private int currentIndex = 0;  // for dealing with the array
 
     public void collectTaxes() {
         for (TaxPayer payer : payers) {

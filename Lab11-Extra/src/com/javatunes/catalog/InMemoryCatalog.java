@@ -77,7 +77,7 @@ public class InMemoryCatalog implements Catalog {
         // return value
         Collection<MusicItem> result = new ArrayList<>();
         for (MusicItem item : catalogData) {
-            if (item.getMusicCategory().equals(category)) {
+            if (item.getMusicCategory().equals(category)) {    // == is okay for enum types
                 result.add(item);
             }
         }
